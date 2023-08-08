@@ -52,7 +52,7 @@ Obs: Se estiver em TypeScript, instale tbm o `ts-node`, para rodar o arquivo .ts
 - TypeScript
   `npm i @types/jsonwebtoken -D`
 
-## Instalar env/ts para guardar cheves:
+## Instalar dotenv/ts para guardar cheves:
 
 `npm install dotenv`
 
