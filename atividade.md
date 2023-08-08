@@ -7,7 +7,8 @@
   ## Entidade Médico(doctor)
 
   - Api deve ser capaz de listar, criar, editar um médico. Todos os dados são obrigatórios para criar um médico.
-    **Estrutura de dados**
+
+  **Estrutura de dados**
 
   ```js
   {
@@ -17,7 +18,7 @@
   }
   ```
 
-  **Entidade Paciente (patient)**
+  ## Entidade Paciente (patient)
 
   - Api deve ser capaz de listar, criar, editar, um paciente.Todos os dados são obrigatórios para criar um paciente.
 
@@ -29,7 +30,7 @@
   }
   ```
 
-  **Entidade Consulta(Appointment)**
+  ## Entidade Consulta(Appointment)
 
   - Api deve ser capaz de listar, criar, editar, uma consulta. Todos os dados são ob
     rigatórios para criar uma consulta.
