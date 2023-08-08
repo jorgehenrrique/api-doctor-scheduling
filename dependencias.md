@@ -15,7 +15,7 @@
 
 `npm install uuid`
 
-- Para typescript
+- TypeScript
   `npm i @types/uuid -D`
 
 ## Instalar Nodemon:
@@ -49,7 +49,7 @@ Obs: Se estiver em TypeScript, instale tbm o `ts-node`, para rodar o arquivo .ts
 
 `npm i jsonwebtoken`
 
-- Para typescript
+- TypeScript
   `npm i @types/jsonwebtoken -D`
 
 ## Instalar env/ts para guardar cheves:
