@@ -4,47 +4,47 @@
 
 - O consumidor deve ser capaz de cadastrar médicos e pacientes e agendar consultas. Deve ser entregue algum tipo de documentação para consumo da api , pode ser um readme ou dados de postman ou de algum software para manipulação de api.
 
-  ## Entidade Médico(doctor)
+## Entidade Médico(doctor)
 
-  - Api deve ser capaz de listar, criar, editar um médico. Todos os dados são obrigatórios para criar um médico.
+- Api deve ser capaz de listar, criar, editar um médico. Todos os dados são obrigatórios para criar um médico.
 
-  **Estrutura de dados**
+**Estrutura de dados**
 
-  ```js
-  {
-  id: "1023-lds-232l2V2" / uuid
-  name: "doctor xy lot",
-  cnh: "12012200323223"
-  }
-  ```
+```js
+{
+id: "1023-lds-232l2V2" / uuid
+name: "doctor xy lot",
+cnh: "12012200323223"
+}
+```
 
-  ## Entidade Paciente (patient)
+## Entidade Paciente (patient)
 
-  - Api deve ser capaz de listar, criar, editar, um paciente.Todos os dados são obrigatórios para criar um paciente.
+- Api deve ser capaz de listar, criar, editar, um paciente.Todos os dados são obrigatórios para criar um paciente.
 
-  ```js
-  {
-  id: "1023-lds-232l2TX"
-  name: "paciente",
-  rg: "44444444444"
-  }
-  ```
+```js
+{
+id: "1023-lds-232l2TX"
+name: "paciente",
+rg: "44444444444"
+}
+```
 
-  ## Entidade Consulta(Appointment)
+## Entidade Consulta(Appointment)
 
-  - Api deve ser capaz de listar, criar, editar, uma consulta. Todos os dados são ob
-    rigatórios para criar uma consulta.
+- Api deve ser capaz de listar, criar, editar, uma consulta. Todos os dados são ob
+  rigatórios para criar uma consulta.
 
-  ```js
-  {
-  id: “02320324”,
-  name: “checkup”,
-  description: “21223232”,
-  date: “11-10-2023 11:15:00”,
-  patient_id: “1023-lds-232l2V2”,
-  doctor_id: “1023-lds-232l2TX”
-  }
-  ```
+```js
+{
+id: “02320324”,
+name: “checkup”,
+description: “21223232”,
+date: “11-10-2023 11:15:00”,
+patient_id: “1023-lds-232l2V2”,
+doctor_id: “1023-lds-232l2TX”
+}
+```
 
 ### Desafios Extras
 
