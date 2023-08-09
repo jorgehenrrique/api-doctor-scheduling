@@ -11,6 +11,7 @@ import { addUsers } from './controllers/addUsers';
 import { listUsers } from './controllers/listUsers';
 import { loginUsers } from './controllers/loginUsers';
 import deleteUsers from './controllers/deleteUsers';
+import fetchUser from './controllers/fetchUser';
 
 dotenv.config();
 const secretKey: string = process.env.SECRET_KEY || '';
@@ -28,6 +29,10 @@ app.post('/login', loginUsers);
 // Listar usuarios pacientes e doutores
 // GET: /users
 app.get('/users', auth, listUsers);
+
+// Buscar doutor/paciente
+// GET: /users/:id
+app.get('/users/:id', auth, fetchUser);
 
 // Adicionar usuarios pacientes e doutores
 // POST: /users/add
