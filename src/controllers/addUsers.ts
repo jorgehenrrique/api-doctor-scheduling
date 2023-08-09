@@ -54,7 +54,6 @@ export default function addUsers(req: any, res: any) {
 
   writeJson(users, 'users');
   console.log('Usuario criado com sucesso');
-  // res.status(201).send('Usuario adicionado com sucesso.');
   res.status(201).send({
     description: 'Usuario adicionado com sucesso.',
     id: newUser.id,

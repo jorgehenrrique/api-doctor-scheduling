@@ -6,7 +6,7 @@ import { readJson, writeJson } from '../dataHandler/dataHendler';
 export default function deleteQuery(req: any, res: any) {
   let queries: Appointment[] = readJson('queries');
 
-  const currentQuery = queries.find((u) => u.id === req.params.id);
+  const currentQuery = queries.find((query) => query.id === req.params.id);
 
   if (currentQuery) {
     queries = queries.filter((u) => u.id !== req.params.id);

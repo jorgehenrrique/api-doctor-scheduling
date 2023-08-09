@@ -1,11 +1,6 @@
 import express from 'express';
-import { v4 as idv4 } from 'uuid';
-import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
-import { Users, Patient, Doctor } from './types/types';
-import { readJson, writeJson } from './dataHandler/dataHendler';
 import auth from './middlewares/auth';
-import checkTypes from './utils/checkTypes';
 import editUsers from './controllers/editUsers';
 import addUsers from './controllers/addUsers';
 import listUsers from './controllers/listUsers';

@@ -4,11 +4,11 @@ import { readJson } from '../dataHandler/dataHendler';
 export default function checkExistence(crm: string, rg: string): boolean {
   const users: Users[] = readJson('users');
 
-  const isUser = users.find((u) => {
-    if ('crm' in u) {
-      return u.crm === crm;
-    } else if ('rg' in u) {
-      return u.rg === rg;
+  const isUser = users.find((user) => {
+    if ('crm' in user) {
+      return user.crm === crm;
+    } else if ('rg' in user) {
+      return user.rg === rg;
     }
     return false;
   });

@@ -6,7 +6,7 @@ import { readJson } from '../dataHandler/dataHendler';
 export default function fetchQuery(req: any, res: any) {
   const queries: Appointment[] = readJson('queries');
 
-  const currentQuery = queries.find((q) => q.id === req.params.id);
+  const currentQuery = queries.find((query) => query.id === req.params.id);
 
   if (currentQuery) {
     return res.json(currentQuery);

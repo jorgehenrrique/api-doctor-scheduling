@@ -10,21 +10,21 @@ export default function addQuery(req: any, res: any) {
   const { name, description, date, patient_id, doctor_id } = req.body;
 
   if (
-    !name.trim() ||
-    !description.trim() ||
-    !date.trim() ||
-    !patient_id.trim() ||
+    !name?.trim() ||
+    !description?.trim() ||
+    !date?.trim() ||
+    !patient_id?.trim() ||
     !doctor_id.trim()
   ) {
     return res.status(400).send('Dados imcompletos, preencha todos os campos.');
   }
 
-  const patientId = users.find((u) => {
-    if ('rg' in u) return u.id === patient_id;
+  const patientId = users.find((user) => {
+    if ('rg' in user) return user.id === patient_id;
     return false;
   });
-  const doctorId = users.find((u) => {
-    if ('crm' in u) return u.id === doctor_id;
+  const doctorId = users.find((user) => {
+    if ('crm' in user) return user.id === doctor_id;
     return false;
   });
 

@@ -16,10 +16,10 @@
     "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
   },
   {
-    "id": "1ace082e-2777-49f3-953d-9326ecc4a196",
-    "name": "Exame02",
+    "id": "61c60b84-130a-4336-a336-28755cd701f5",
+    "name": "Exame03",
     "description": "Rotina",
-    "date": "10-10-2013 21:30:00",
+    "date": "10-10-2013 14:30:00",
     "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
     "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
   }

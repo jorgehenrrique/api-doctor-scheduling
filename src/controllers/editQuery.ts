@@ -7,7 +7,7 @@ import check15Minutes from '../utils/check15Minutes';
 export default function editQuery(req: any, res: any) {
   let queries: Appointment[] = readJson('queries');
 
-  const idx = queries.findIndex((u) => u.id === req.params.id);
+  const idx = queries.findIndex((query) => query.id === req.params.id);
 
   const { name, description, date, patient_id, doctor_id } = req.body;
 
