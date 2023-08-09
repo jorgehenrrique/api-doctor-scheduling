@@ -1,7 +1,7 @@
 export type Doctor = {
   id: string;
   name: string;
-  crn: string;
+  crm: string;
   pswd: string;
 };
 
