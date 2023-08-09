@@ -3,7 +3,7 @@ import { readJson } from '../dataHandler/dataHendler';
 
 // Listar usuarios pacientes e doutores
 // GET: /users
-export function listUsers(_: any, res: any) {
+export default function listUsers(_: any, res: any) {
   const usersList: Users[] = readJson('users');
 
   if (usersList.length > 0) {

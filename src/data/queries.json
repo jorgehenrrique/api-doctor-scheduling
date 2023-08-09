@@ -1,0 +1,10 @@
+[
+  {
+    "id": "f3a213ad-df08-4157-9708-b030c551cac9",
+    "name": "Exame",
+    "description": "Rotina",
+    "date": "10-10-2013 11:20:00",
+    "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
+    "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
+  }
+]

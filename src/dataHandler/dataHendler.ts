@@ -6,7 +6,7 @@ const usersPath = path.resolve(__dirname, '..', 'data', 'users.json');
 const queriesPath = path.resolve(__dirname, '..', 'data', 'queries.json');
 
 // Ler arquivos json
-export function readJson(where: string): Users[] {
+export function readJson(where: string) {
   try {
     if (where === 'users') {
       const content: string = fs.readFileSync(usersPath, 'utf8');
@@ -30,10 +30,10 @@ export function writeJson(
 ): void {
   try {
     if (where === 'users') {
-      fs.writeFileSync(usersPath, JSON.stringify(content));
+      fs.writeFileSync(usersPath, JSON.stringify(content, null, 2));
       console.log('Arquivo: users.json atualizado com sucesso.');
     } else if (where === 'queries') {
-      fs.writeFileSync(queriesPath, JSON.stringify(content));
+      fs.writeFileSync(queriesPath, JSON.stringify(content, null, 2));
       console.log('Arquivo: queries.json atualizado com sucesso.');
     }
   } catch (error) {

@@ -8,7 +8,7 @@ const secretKey: string = process.env.SECRET_KEY || '';
 
 // Logar usuario
 // POST: /login
-export function loginUsers(req: any, res: any) {
+export default function loginUsers(req: any, res: any) {
   const { id, name, crm, rg, pswd } = req.body;
 
   const users: Users[] = readJson('users');

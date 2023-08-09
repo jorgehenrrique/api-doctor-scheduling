@@ -32,8 +32,7 @@ rg: "44444444444"
 
 ## Entidade Consulta(Appointment)
 
-- Api deve ser capaz de listar, criar, editar, uma consulta. Todos os dados são ob
-  rigatórios para criar uma consulta.
+- Api deve ser capaz de listar, criar, editar, uma consulta. Todos os dados são obrigatórios para criar uma consulta.
 
 ```js
 {
@@ -52,4 +51,4 @@ Aplique as seguintes validações para melhorar api
 
 - CRM do médico deve ser único no sistema não pode permitir um cadastro de um CRM que já existe.
 - Um médico não pode ter mais de uma consulta no mesmo horário , aplique intervalo de 15 minutos de espaço entre as consultas agendadas com mesmo médico exemplo se doutor tem uma consulta agendada para às 10:00 nao podemos marcar nenhuma consulta em intervalo de tempo de 09:45 às 10:15
-- Somente médicos podem agendar consultas, criar fluxo de login (cnh, senha) que devolva um token jwt do médico logado e use para validação operações da entidade de consulta.
+- Somente médicos podem agendar consultas, criar fluxo de login (crm, senha) que devolva um token jwt do médico logado e use para validação operações da entidade de consulta.

@@ -13,11 +13,11 @@ export type Patient = {
 
 export type Users = Doctor | Patient;
 
-export interface Appointment {
+export type Appointment = {
   id: string;
   name: string;
   description?: string;
   date: string;
   patient_id: string;
   doctor_id: string;
-}
+};

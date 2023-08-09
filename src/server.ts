@@ -6,12 +6,13 @@ import { Users, Patient, Doctor } from './types/types';
 import { readJson, writeJson } from './dataHandler/dataHendler';
 import auth from './middlewares/auth';
 import checkTypes from './utils/checkTypes';
-import { editUsers } from './controllers/editUsers';
-import { addUsers } from './controllers/addUsers';
-import { listUsers } from './controllers/listUsers';
-import { loginUsers } from './controllers/loginUsers';
+import editUsers from './controllers/editUsers';
+import addUsers from './controllers/addUsers';
+import listUsers from './controllers/listUsers';
+import loginUsers from './controllers/loginUsers';
 import deleteUsers from './controllers/deleteUsers';
 import fetchUser from './controllers/fetchUser';
+import addQuery from './controllers/addQuery';
 
 dotenv.config();
 const secretKey: string = process.env.SECRET_KEY || '';
@@ -45,3 +46,9 @@ app.put('/users/:id', auth, editUsers);
 // Deletar paciente/doutor
 // DELETE: /users/:id
 app.delete('/users/:id', auth, deleteUsers);
+
+// Consultas
+
+// Adicionar consulta
+// POST: /query
+app.post('/query', auth, addQuery);

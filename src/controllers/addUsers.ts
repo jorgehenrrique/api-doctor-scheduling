@@ -6,7 +6,7 @@ import checkExistence from '../utils/checkExistence';
 
 // Adicionar usuarios pacientes e doutores
 // POST: /users/add
-export function addUsers(req: any, res: any) {
+export default function addUsers(req: any, res: any) {
   const { name, crm, rg, pswd } = req.body;
 
   if (!checkExistence(crm, rg)) {
@@ -54,5 +54,9 @@ export function addUsers(req: any, res: any) {
 
   writeJson(users, 'users');
   console.log('Usuario criado com sucesso');
-  res.status(201).send('Usuario adicionado com sucesso.');
+  // res.status(201).send('Usuario adicionado com sucesso.');
+  res.status(201).send({
+    description: 'Usuario adicionado com sucesso.',
+    id: newUser.id,
+  });
 }

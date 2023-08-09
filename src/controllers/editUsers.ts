@@ -5,7 +5,7 @@ import checkExistence from '../utils/checkExistence';
 
 // Editar Usuarios
 // PUT: /users/:id
-export function editUsers(req: any, res: any) {
+export default function editUsers(req: any, res: any) {
   let users: Users[] = readJson('users');
 
   const idx = users.findIndex((u) => u.id === req.params.id);
@@ -32,7 +32,10 @@ export function editUsers(req: any, res: any) {
 
       users[idx] = payload;
       writeJson(users, 'users');
-      res.status(200).send('Dados atualizados com sucesso');
+      res.status(200).send({
+        description: 'Dados atualizados com sucesso.',
+        id: payload.id,
+      });
     } else if ('rg' in users[idx]) {
       console.log('É Paciente');
       const payload: Patient = {
@@ -43,7 +46,10 @@ export function editUsers(req: any, res: any) {
 
       users[idx] = payload;
       writeJson(users, 'users');
-      res.status(200).send('Dados atualizados com sucesso');
+      res.status(200).send({
+        description: 'Dados atualizados com sucesso.',
+        id: payload.id,
+      });
     }
   } else {
     return res.status(404).send('Doutor ou paciente não encontrado');
