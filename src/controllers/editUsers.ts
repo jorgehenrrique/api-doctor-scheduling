@@ -1,6 +1,7 @@
 import { Users, Doctor, Patient } from '../types/types';
 import { readJson, writeJson } from '../dataHandler/dataHendler';
 import checkTypes from '../utils/checkTypes';
+import checkExistence from '../utils/checkExistence';
 
 // Editar Usuarios
 // PUT: /users/:id
@@ -13,6 +14,10 @@ export function editUsers(req: any, res: any) {
 
   if (!checkTypes(req.body)) {
     return res.status(400).send('Tipos de dados inválidos');
+  }
+
+  if (!checkExistence(crm, rg)) {
+    return res.status(400).send('CRM ou RG já existe');
   }
 
   if (idx !== -1) {

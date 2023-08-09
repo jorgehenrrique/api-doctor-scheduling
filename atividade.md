@@ -14,7 +14,7 @@
 {
 id: "1023-lds-232l2V2" / uuid
 name: "doctor xy lot",
-cnh: "12012200323223"
+crm: "12012200323223"
 }
 ```
 
@@ -50,6 +50,6 @@ doctor_id: “1023-lds-232l2TX”
 
 Aplique as seguintes validações para melhorar api
 
-- CNH do médico deve ser único sistema não pode permitir um cadastro de um CNH que já existe.
+- CRM do médico deve ser único no sistema não pode permitir um cadastro de um CRM que já existe.
 - Um médico não pode ter mais de uma consulta no mesmo horário , aplique intervalo de 15 minutos de espaço entre as consultas agendadas com mesmo médico exemplo se doutor tem uma consulta agendada para às 10:00 nao podemos marcar nenhuma consulta em intervalo de tempo de 09:45 às 10:15
 - Somente médicos podem agendar consultas, criar fluxo de login (cnh, senha) que devolva um token jwt do médico logado e use para validação operações da entidade de consulta.

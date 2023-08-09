@@ -2,7 +2,7 @@ export type Doctor = {
   id: string;
   name: string;
   crm: string;
-  pswd: string;
+  pswd: string | number;
 };
 
 export type Patient = {

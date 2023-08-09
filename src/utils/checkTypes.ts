@@ -1,20 +1,29 @@
-import { Users } from '../types/types';
+import { Users, Doctor, Patient } from '../types/types';
 
 // Checa o tipo de dados
 export default function checkTypes(user: Users): boolean {
   if ('crm' in user) {
+    const doctorUser = user as Doctor;
     if (
-      typeof user.name === 'string' &&
-      typeof user.crm === 'string' &&
-      typeof user.pswd === 'string'
+      typeof doctorUser.name !== 'string' ||
+      typeof doctorUser.crm !== 'string'
     ) {
-      return true;
+      return false;
     }
   } else if ('rg' in user) {
-    if (typeof user.name === 'string' && typeof user.rg === 'string') {
-      return true;
+    const patientUser = user as Patient;
+    if (
+      typeof patientUser.name !== 'string' ||
+      typeof patientUser.rg !== 'string'
+    ) {
+      return false;
+    }
+  } else if ('name' in user) {
+    const patientUser = user as Patient;
+    if (typeof patientUser.name !== 'string') {
+      return false;
     }
   }
 
-  return false;
+  return true;
 }
