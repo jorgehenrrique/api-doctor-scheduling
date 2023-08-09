@@ -14,6 +14,7 @@ import deleteUsers from './controllers/deleteUsers';
 import fetchUser from './controllers/fetchUser';
 import addQuery from './controllers/addQuery';
 import fetchQuery from './controllers/fetchQuery';
+import listQuery from './controllers/listQuery';
 
 dotenv.config();
 const secretKey: string = process.env.SECRET_KEY || '';
@@ -28,13 +29,13 @@ app.listen(port, () => console.log('Server ativo port: ' + port));
 // POST: /login
 app.post('/login', loginUsers);
 
-// Listar usuarios pacientes e doutores
-// GET: /users
-app.get('/users', auth, listUsers);
-
 // Buscar doutor/paciente
 // GET: /users/:id
 app.get('/users/:id', auth, fetchUser);
+
+// Listar usuarios pacientes e doutores
+// GET: /users
+app.get('/users', auth, listUsers);
 
 // Adicionar usuarios pacientes e doutores
 // POST: /users/add
@@ -48,7 +49,7 @@ app.put('/users/:id', auth, editUsers);
 // DELETE: /users/:id
 app.delete('/users/:id', auth, deleteUsers);
 
-// Consultas
+// CONSULTAS
 
 // Adicionar consulta
 // POST: /query
@@ -57,3 +58,7 @@ app.post('/query', auth, addQuery);
 // Buscar consulta
 // GET: /query/:id
 app.get('/query/:id', auth, fetchQuery);
+
+// Listar consultas
+// GET: /query
+app.get('/query', auth, listQuery);

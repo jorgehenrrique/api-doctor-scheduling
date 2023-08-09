@@ -20,6 +20,6 @@ export default function listUsers(_: any, res: any) {
     }
     res.json(users); // Retorna paciente/doutor, id/nome
   } else {
-    res.status(404).send('Não há pacientes ou doutores cadastrados');
+    res.status(404).send('Não há pacientes ou doutores cadastrados.');
   }
 }
