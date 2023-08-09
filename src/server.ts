@@ -16,6 +16,7 @@ import addQuery from './controllers/addQuery';
 import fetchQuery from './controllers/fetchQuery';
 import listQuery from './controllers/listQuery';
 import deleteQuery from './controllers/deleteQuery';
+import editQuery from './controllers/editQuery';
 
 dotenv.config();
 const secretKey: string = process.env.SECRET_KEY || '';
@@ -67,3 +68,7 @@ app.get('/query', auth, listQuery);
 // Deletar consulta
 // DELETE: /query/:id
 app.delete('/query/:id', auth, deleteQuery);
+
+// Editar consulta
+// PUT: /query/:id
+app.put('/query/:id', auth, editQuery);

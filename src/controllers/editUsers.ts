@@ -22,7 +22,6 @@ export default function editUsers(req: any, res: any) {
 
   if (idx !== -1) {
     if ('crm' in users[idx]) {
-      console.log('É doutor');
       const payload: Doctor = {
         id: users[idx].id,
         name: name || users[idx].name,
@@ -37,7 +36,6 @@ export default function editUsers(req: any, res: any) {
         id: payload.id,
       });
     } else if ('rg' in users[idx]) {
-      console.log('É Paciente');
       const payload: Patient = {
         id: users[idx].id,
         name: name || users[idx].name,
