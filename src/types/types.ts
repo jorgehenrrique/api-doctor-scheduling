@@ -16,7 +16,7 @@ export type Users = Doctor | Patient;
 export type Appointment = {
   id: string;
   name: string;
-  description?: string;
+  description: string;
   date: string;
   patient_id: string;
   doctor_id: string;
