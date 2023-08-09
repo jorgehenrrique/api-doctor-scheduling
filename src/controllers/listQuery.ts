@@ -1,6 +1,8 @@
 import { Appointment } from '../types/types';
 import { readJson } from '../dataHandler/dataHendler';
 
+// Listar consultas
+// GET: /query
 export default function listQuery(_: any, res: any) {
   const queries: Appointment[] = readJson('queries');
 
