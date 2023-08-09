@@ -1,6 +1,7 @@
 import { Users, Appointment } from '../types/types';
 import { v4 as idv4 } from 'uuid';
 import { readJson, writeJson } from '../dataHandler/dataHendler';
+import check15Minutes from '../utils/check15Minutes';
 
 // Adicionar consulta
 // POST: /query
@@ -41,6 +42,15 @@ export default function addQuery(req: any, res: any) {
   };
 
   const queries: Appointment[] = readJson('queries');
+
+  if (check15Minutes(newQuery, queries)) {
+    return res
+      .status(400)
+      .send(
+        'Nova consulta deve estar dentro do intervalo de 15 minutos de consultas existentes.'
+      );
+  }
+
   queries.push(newQuery);
 
   writeJson(queries, 'queries');
