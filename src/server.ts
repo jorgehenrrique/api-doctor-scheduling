@@ -13,6 +13,7 @@ import loginUsers from './controllers/loginUsers';
 import deleteUsers from './controllers/deleteUsers';
 import fetchUser from './controllers/fetchUser';
 import addQuery from './controllers/addQuery';
+import fetchQuery from './controllers/fetchQuery';
 
 dotenv.config();
 const secretKey: string = process.env.SECRET_KEY || '';
@@ -52,3 +53,7 @@ app.delete('/users/:id', auth, deleteUsers);
 // Adicionar consulta
 // POST: /query
 app.post('/query', auth, addQuery);
+
+// Buscar consulta
+// GET: /query/:id
+app.get('/query/:id', auth, fetchQuery);
