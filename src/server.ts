@@ -18,13 +18,13 @@ app.listen(port, () => console.log('Server ativo port: ' + port));
 // Logar usuario
 // POST: /login
 app.post('/login', (req, res) => {
-  const { id, name, cnh, rg, pswd } = req.body;
+  const { id, name, crn, rg, pswd } = req.body;
 
   const users: Users[] = readJson('users');
   const currentUser = users.find((u) => u.name === name);
 
   if (currentUser) {
-    if ('cnh' in currentUser) {
+    if ('crn' in currentUser) {
       if (currentUser.pswd === pswd) {
         const user = {
           id: currentUser.id,
@@ -78,7 +78,7 @@ app.get('/users', auth, (req, res) => {
 // Adicionar usuarios
 // POST: /users/add
 app.post('/users/add', auth, (req, res) => {
-  const { name, cnh, rg, pswd } = req.body;
+  const { name, crn, rg, pswd } = req.body;
 
   let newUser: Users;
 
@@ -94,7 +94,7 @@ app.post('/users/add', auth, (req, res) => {
       name: name,
       rg: rg,
     };
-  } else if (cnh?.trim()) {
+  } else if (crn?.trim()) {
     if (!name?.trim() || !pswd?.trim()) {
       return res
         .status(400)
@@ -103,7 +103,7 @@ app.post('/users/add', auth, (req, res) => {
     newUser = {
       id: idv4(),
       name: name,
-      cnh: cnh,
+      crn: crn,
       pswd: pswd,
     };
   } else {
