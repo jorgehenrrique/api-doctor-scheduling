@@ -20,7 +20,6 @@ app.listen(port, () => console.log('Server ativo port: ' + port));
 app.post('/login', (req, res) => {
   const { id, name, cnh, rg, pswd } = req.body;
 
-  // users ou queries
   const users: Users[] = readJson('users');
   const currentUser = users.find((u) => u.name === name);
 
@@ -53,7 +52,7 @@ app.post('/login', (req, res) => {
   res.status(401).send('Usuario ou senha inválidos');
 });
 
-// Listar dados
+// Listar usuarios
 // GET: /users
 app.get('/users', auth, (req, res) => {
   const usersList: Users[] = readJson('users');
