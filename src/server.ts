@@ -10,6 +10,7 @@ import { editUsers } from './controllers/editUsers';
 import { addUsers } from './controllers/addUsers';
 import { listUsers } from './controllers/listUsers';
 import { loginUsers } from './controllers/loginUsers';
+import deleteUsers from './controllers/deleteUsers';
 
 dotenv.config();
 const secretKey: string = process.env.SECRET_KEY || '';
@@ -35,3 +36,7 @@ app.post('/users/add', auth, addUsers);
 // Editar Usuarios
 // PUT: /users/:id
 app.put('/users/:id', auth, editUsers);
+
+// Deletar paciente/doutor
+// DELETE: /users/:id
+app.delete('/users/:id', auth, deleteUsers);
