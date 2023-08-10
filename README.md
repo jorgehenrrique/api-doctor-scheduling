@@ -12,9 +12,12 @@ Todas as rotas estão protegidas por JWT para autenticação.
 
 ## Tecnologias utilizadas
 
-- Express
-- TypeScript
 - JSON Web Tokens (JWT)
+- TypeScript
+- Express
+- dotenv
+- uuid
+- fs
 
 ## Entidades
 
@@ -104,6 +107,8 @@ Todas as rotas estão protegidas por JWT para autenticação.
 
 ## Rotas
 
+### O servidor estará disponível em http://localhost:3333
+
 ## Autenticação
 
 A primeira etapa é realizar o login para obter o token JWT, que deverá ser incluído em todas as demais requisições.
@@ -115,9 +120,15 @@ A primeira etapa é realizar o login para obter o token JWT, que deverá ser inc
 **Corpo da requisição:**
 
 ```json
+// Doutor
 {
   "name": "usuario",
   "pswd": "senha123"
+}
+// Ou
+// Paciente
+{
+  "name": "Maria"
 }
 ```
 
@@ -142,8 +153,24 @@ Salvar o token recebido para incluir nos headers das demais requisições.
 **Headers:**
 
 ```
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
+
+---
+
+### Listar por ID
+
+**URL:** `/users/id`
+
+**Método:** `GET`
+
+**Headers:**
+
+```
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+---
 
 ### Cadastrar
 
@@ -154,7 +181,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 **Headers:**
 
 ```
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
 **Corpo:**
@@ -174,11 +201,144 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
   }
 ```
 
-### Consultas
+---
 
-### outros métodos (editar, excluir, buscar)
+### Editar
 
-Análogos aos exemplos acima
+**URL:** `/users/id`
+
+**Método:** `PUT`
+
+**Headers:**
+
+```
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+**Corpo:**
+
+```json
+//   Doutor
+  {
+    "name": "User02",
+    "crm": "1122.2211",
+    "pswd": "1234"
+  }
+// ou
+// Paciente
+  {
+    "name": "User01",
+    "rg": "444-333"
+  }
+```
+
+---
+
+### Deletar
+
+**URL:** `/users/id`
+
+**Método:** `DELETE`
+
+**Headers:**
+
+```
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+## Consultas
+
+### Cadastrar consulta
+
+**URL:** `/query`
+
+**Método:** `POST`
+
+**Headers:**
+
+```
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+**Corpo:**
+
+```json
+{
+  "name": "Exame",
+  "description": "Rotina",
+  "date": "10-10-2013 15:30:00",
+  "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
+  "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
+}
+```
+
+---
+
+### Listar consultas
+
+**URL:** `/query`
+
+**Método:** `GET`
+
+**Headers:**
+
+```
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+---
+
+### Listar consulta por ID
+
+**URL:** `/query/id`
+
+**Método:** `GET`
+
+**Headers:**
+
+```
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+---
+
+### Deletar consulta por ID
+
+**URL:** `/query/id`
+
+**Método:** `DELETE`
+
+**Headers:**
+
+```
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+---
+
+### Editar consulta
+
+**URL:** `/query/id`
+
+**Método:** `PUT`
+
+**Headers:**
+
+```
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+**Corpo:**
+
+```json
+{
+  "name": "Exame",
+  "description": "Rotina",
+  "date": "10-10-2013 15:30:00",
+  "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
+  "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
+}
+```
 
 ## Como testar
 
