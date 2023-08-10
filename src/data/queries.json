@@ -22,5 +22,13 @@
     "date": "10-10-2013 14:30:00",
     "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
     "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
+  },
+  {
+    "id": "0a4d06bb-8651-4af4-8013-240b6a2d791d",
+    "name": "Exame03",
+    "description": "Rotina",
+    "date": "10-10-2013 15:30:00",
+    "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
+    "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
   }
 ]

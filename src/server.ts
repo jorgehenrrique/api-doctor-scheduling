@@ -46,11 +46,9 @@ app.delete('/users/:id', auth, deleteUsers);
 app.post('/query', auth, addQuery);
 
 // Buscar consulta
-// GET: /query/:id
 app.get('/query/:id', auth, fetchQuery);
 
 // Listar consultas
-// GET: /query
 app.get('/query', auth, listQuery);
 
 // Deletar consulta
