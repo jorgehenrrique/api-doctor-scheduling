@@ -55,5 +55,4 @@ app.get('/query', auth, listQuery);
 app.delete('/query/:id', auth, deleteQuery);
 
 // Editar consulta
-// PUT: /query/:id
 app.put('/query/:id', auth, editQuery);
