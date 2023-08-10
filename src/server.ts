@@ -1,5 +1,4 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import auth from './middlewares/auth';
 import editUsers from './controllers/editUsers';
 import addUsers from './controllers/addUsers';
@@ -12,9 +11,6 @@ import fetchQuery from './controllers/fetchQuery';
 import listQuery from './controllers/listQuery';
 import deleteQuery from './controllers/deleteQuery';
 import editQuery from './controllers/editQuery';
-
-dotenv.config();
-const secretKey: string = process.env.SECRET_KEY || '';
 
 const app = express();
 const port = 3333;
