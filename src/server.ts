@@ -23,33 +23,26 @@ app.use(express.json());
 app.listen(port, () => console.log('Server ativo port: ' + port));
 
 // Logar usuario
-// POST: /login
 app.post('/login', loginUsers);
 
 // Buscar doutor/paciente
-// GET: /users/:id
 app.get('/users/:id', auth, fetchUser);
 
 // Listar usuarios, pacientes/doutores
-// GET: /users
 app.get('/users', auth, listUsers);
 
 // Adicionar usuarios, pacientes/doutores
-// POST: /users/add
 app.post('/users/add', auth, addUsers);
 
 // Editar usuarios
-// PUT: /users/:id
 app.put('/users/:id', auth, editUsers);
 
 // Deletar paciente/doutor
-// DELETE: /users/:id
 app.delete('/users/:id', auth, deleteUsers);
 
 // CONSULTAS
 
 // Adicionar consulta
-// POST: /query
 app.post('/query', auth, addQuery);
 
 // Buscar consulta
