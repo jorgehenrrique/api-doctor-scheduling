@@ -6,7 +6,7 @@ import { readJson } from '../dataHandler/dataHendler';
 dotenv.config();
 const secretKey: string = process.env.SECRET_KEY || '';
 
-// Logar usuario
+// Logar
 // POST: /login
 export default function loginUsers(req: any, res: any) {
   const { name, pswd } = req.body;

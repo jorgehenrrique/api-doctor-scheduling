@@ -1,7 +1,7 @@
 import { Users } from '../types/types';
 import { readJson } from '../dataHandler/dataHendler';
 
-// Listar usuarios pacientes e doutores
+// Listar usuarios, pacientes/doutores
 // GET: /users
 export default function listUsers(_: any, res: any) {
   const usersList: Users[] = readJson('users');

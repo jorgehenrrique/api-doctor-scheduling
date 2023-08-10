@@ -30,15 +30,15 @@ app.post('/login', loginUsers);
 // GET: /users/:id
 app.get('/users/:id', auth, fetchUser);
 
-// Listar usuarios pacientes e doutores
+// Listar usuarios, pacientes/doutores
 // GET: /users
 app.get('/users', auth, listUsers);
 
-// Adicionar usuarios pacientes e doutores
+// Adicionar usuarios, pacientes/doutores
 // POST: /users/add
 app.post('/users/add', auth, addUsers);
 
-// Editar Usuarios
+// Editar usuarios
 // PUT: /users/:id
 app.put('/users/:id', auth, editUsers);
 

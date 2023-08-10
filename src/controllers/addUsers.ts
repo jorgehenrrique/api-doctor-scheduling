@@ -4,22 +4,21 @@ import { v4 as idv4 } from 'uuid';
 import { readJson, writeJson } from '../dataHandler/dataHendler';
 import checkExistence from '../utils/checkExistence';
 
-// Adicionar usuarios pacientes e doutores
+// Adicionar usuarios, pacientes/doutores
 // POST: /users/add
 export default function addUsers(req: any, res: any) {
   const { name, crm, rg, pswd } = req.body;
 
   if (!checkExistence(crm, rg)) {
-    return res.status(400).send('CRM ou RG já existe');
+    return res.status(400).send('CRM ou RG já existe.');
   }
 
   if (!checkTypes(req.body)) {
-    return res.status(400).send('Tipos de dados inválidos');
+    return res.status(400).send('Tipos de dados inválidos.');
   }
 
   let newUser: Users;
 
-  // Coalescência nula (?.)
   if (rg?.trim()) {
     if (!name.trim()) {
       return res

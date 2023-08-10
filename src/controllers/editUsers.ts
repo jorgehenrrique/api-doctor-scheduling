@@ -3,7 +3,7 @@ import { readJson, writeJson } from '../dataHandler/dataHendler';
 import checkTypes from '../utils/checkTypes';
 import checkExistence from '../utils/checkExistence';
 
-// Editar Usuarios
+// Editar usuarios
 // PUT: /users/:id
 export default function editUsers(req: any, res: any) {
   let users: Users[] = readJson('users');
