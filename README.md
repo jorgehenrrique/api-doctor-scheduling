@@ -302,7 +302,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ---
 
-### Deletar consulta por ID
+### Deletar consulta
 
 **URL:** `/query/id`
 
