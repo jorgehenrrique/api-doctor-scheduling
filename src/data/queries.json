@@ -8,26 +8,10 @@
     "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
   },
   {
-    "id": "5ed7b84b-d8c2-490a-bef9-2b4e98dec546",
-    "name": "Exame",
-    "description": "Rotina",
-    "date": "10-10-2013 11:4:00",
-    "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
-    "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
-  },
-  {
     "id": "61c60b84-130a-4336-a336-28755cd701f5",
     "name": "Exame03",
     "description": "Rotina",
     "date": "10-10-2013 14:30:00",
-    "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
-    "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
-  },
-  {
-    "id": "0a4d06bb-8651-4af4-8013-240b6a2d791d",
-    "name": "Exame03",
-    "description": "Rotina",
-    "date": "10-10-2013 15:30:00",
     "patient_id": "e4797064-ebd1-45d0-a415-6a31b0045cbb",
     "doctor_id": "ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
   }

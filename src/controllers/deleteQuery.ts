@@ -9,7 +9,7 @@ export default function deleteQuery(req: any, res: any) {
   const currentQuery = queries.find((query) => query.id === req.params.id);
 
   if (currentQuery) {
-    queries = queries.filter((u) => u.id !== req.params.id);
+    queries = queries.filter((query) => query.id !== req.params.id);
     writeJson(queries, 'queries');
     return res.status(200).send('Consulta deletada com sucesso');
   } else {

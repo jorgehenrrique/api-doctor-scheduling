@@ -52,7 +52,6 @@ app.get('/query/:id', auth, fetchQuery);
 app.get('/query', auth, listQuery);
 
 // Deletar consulta
-// DELETE: /query/:id
 app.delete('/query/:id', auth, deleteQuery);
 
 // Editar consulta
