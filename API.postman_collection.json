@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "be2e03fc-9f52-4928-b96c-a3fb2318f403",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28805792"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:3333/users/id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4ODE0NiwiZXhwIjoxNjkxNzA2MTQ2fQ.dOQbHA49J1pnWL2sddQeX3dPBMEUpStvY9WjlnSiuvE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3333/users/ab03748c-f3d1-46c7-81d7-35e6d6ca71cf",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"users",
+						"ab03748c-f3d1-46c7-81d7-35e6d6ca71cf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4ODE0NiwiZXhwIjoxNjkxNzA2MTQ2fQ.dOQbHA49J1pnWL2sddQeX3dPBMEUpStvY9WjlnSiuvE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3333/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// Doutor\n  {\n    \"name\": \"Mario\",\n    \"pswd\": \"1234\"\n  }\n\n// Paciente\n// {\n//     \"name\": \"Maria\"\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3333/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/users/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4ODE0NiwiZXhwIjoxNjkxNzA2MTQ2fQ.dOQbHA49J1pnWL2sddQeX3dPBMEUpStvY9WjlnSiuvE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "//   Doutor\n  {\n    \"name\": \"User02\",\n    \"crm\": \"1122.2211\",\n    \"pswd\": \"123\"\n  }\n\n// Paciente\n//   {\n//     \"name\": \"User01\",\n//     \"rg\": \"444-333\"\n//   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3333/users/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/users/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4ODE0NiwiZXhwIjoxNjkxNzA2MTQ2fQ.dOQbHA49J1pnWL2sddQeX3dPBMEUpStvY9WjlnSiuvE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// Paciente\n{\n    \"name\": \"Mariah\",\n    \"rg\": \"444-333\"\n}\n\n// Doutor\n//   {\n//     \"name\": \"Mario\",\n//     \"crm\": \"1122.22114\",\n//     \"pswd\": \"1234\"\n//   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3333/users/e4797064-ebd1-45d0-a415-6a31b0045cbb",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"users",
+						"e4797064-ebd1-45d0-a415-6a31b0045cbb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/users/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4OTU0MiwiZXhwIjoxNjkxNzA3NTQyfQ.CYf7gkpzqtbeTiMw7HkZ3NpqJuZAuI0r6JtFmnFM0Ww",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3333/users/73a6c491-532e-40e4-b262-04cdf6980bc3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"users",
+						"73a6c491-532e-40e4-b262-04cdf6980bc3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4OTU0MiwiZXhwIjoxNjkxNzA3NTQyfQ.CYf7gkpzqtbeTiMw7HkZ3NpqJuZAuI0r6JtFmnFM0Ww",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Exame03\",\n  \"description\": \"Rotina\",\n  \"date\": \"10-10-2013 15:30:00\",\n  \"patient_id\": \"e4797064-ebd1-45d0-a415-6a31b0045cbb\",\n  \"doctor_id\": \"ab03748c-f3d1-46c7-81d7-35e6d6ca71cf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3333/query",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/query/id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4OTU0MiwiZXhwIjoxNjkxNzA3NTQyfQ.CYf7gkpzqtbeTiMw7HkZ3NpqJuZAuI0r6JtFmnFM0Ww",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3333/query/0a4d06bb-8651-4af4-8013-240b6a2d791d",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"query",
+						"0a4d06bb-8651-4af4-8013-240b6a2d791d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/query",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4OTU0MiwiZXhwIjoxNjkxNzA3NTQyfQ.CYf7gkpzqtbeTiMw7HkZ3NpqJuZAuI0r6JtFmnFM0Ww",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3333/query",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/query/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4OTU0MiwiZXhwIjoxNjkxNzA3NTQyfQ.CYf7gkpzqtbeTiMw7HkZ3NpqJuZAuI0r6JtFmnFM0Ww",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:3333/query/b60f861c-a26f-4864-9c64-77e52c96fb9f",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"query",
+						"b60f861c-a26f-4864-9c64-77e52c96fb9f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3333/query/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFiMDM3NDhjLWYzZDEtNDZjNy04MWQ3LTM1ZTZkNmNhNzFjZiIsIm5hbWUiOiJNYXJpbyIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTY5MTY4OTU0MiwiZXhwIjoxNjkxNzA3NTQyfQ.CYf7gkpzqtbeTiMw7HkZ3NpqJuZAuI0r6JtFmnFM0Ww",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Exame02\",\n  \"description\": \"Rotina\",\n  \"date\": \"10-10-2013 12:30:00\",\n  \"patient_id\": \"e4797064-ebd1-45d0-a415-6a31b0045cbb\",\n  \"doctor_id\": \"ab03748c-f3d1-46c7-81d7-35e6d6ca71cf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3333/query/61c60b84-130a-4336-a336-28755cd701f5",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"query",
+						"61c60b84-130a-4336-a336-28755cd701f5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
