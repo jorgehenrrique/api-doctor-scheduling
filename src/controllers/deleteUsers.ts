@@ -1,6 +1,8 @@
 import { Users } from '../types/types';
 import { readJson, writeJson } from '../dataHandler/dataHendler';
 
+// Deletar usuario
+// DELETE: /users/:id
 export default function deleteUsers(req: any, res: any) {
   let users: Users[] = readJson('users');
 
