@@ -6,13 +6,15 @@ import { readJson, writeJson } from '../dataHandler/dataHendler';
 export default function deleteUsers(req: any, res: any) {
   let users: Users[] = readJson('users');
 
-  const currentUser = users.find((u) => u.id === req.params.id);
+  const id = req.params.id;
+
+  const currentUser = users.find((u) => u.id === id);
 
   if (currentUser) {
-    users = users.filter((u) => u.id !== req.params.id);
+    users = users.filter((u) => u.id !== id);
     writeJson(users, 'users');
     return res.status(200).send('Deletado com sucesso');
   } else {
-    return res.status(404).send(`Não há dados com o id: ${req.params.id}`);
+    return res.status(404).send(`Não há dados com o id: ${id}`);
   }
 }
